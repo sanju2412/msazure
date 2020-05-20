@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'balic.nb.mr.bank.details'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	//lombook dependencies
+	compileOnly 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+	testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	compile("com.h2database:h2:1.4.191")
+	//testCompile group: 'com.h2database', name: 'h2'
+	compile group: 'org.hibernate', name: 'hibernate-core'
+	// https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+	compile group: 'org.springframework', name: 'spring-jdbc'
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
